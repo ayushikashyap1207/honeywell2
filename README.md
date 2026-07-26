@@ -129,8 +129,6 @@ No external services, databases, or network access are required — everything r
 
 - Python 3.9 or later
 - pip
-- ~500 MB free disk (synthetic data + models at default scale)
-- No GPU required (PyTorch will use CUDA automatically if available, otherwise CPU)
 
 **`requirements.txt`**
 ```
@@ -170,8 +168,6 @@ Create the runtime folders (the scripts also create these automatically if missi
 ```bash
 mkdir -p data models dashboard
 ```
-
-No API keys, credentials, or network access are needed — the entire pipeline runs offline against locally generated CSV files.
 
 ## Running the Project
 
