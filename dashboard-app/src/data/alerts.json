@@ -1,0 +1,5440 @@
+{
+  "summary": {
+    "total_sessions": 18644,
+    "alert_budget": 187,
+    "precision_in_queue": 0.8877005347593583,
+    "true_anomalies_total": 402,
+    "entities_monitored": 32
+  },
+  "alerts": [
+    {
+      "rank": 1,
+      "session_id": "7314d0931af5",
+      "entity_id": "user_21f0d642",
+      "entity_type": "user",
+      "risk_score": 1.0,
+      "detection_method": "cold_start_isolation_forest",
+      "predicted_attack": "low_and_slow_exfiltration",
+      "classifier_confidence": 0.5738957223923554,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: new/unrecognized device fingerprint + accessed resources never touched before + new entity with little to no history (cold start).",
+      "top_features": [
+        {
+          "feature": "device_novel",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "resource_novelty",
+          "z_score": 5.71
+        },
+        {
+          "feature": "is_cold_start",
+          "z_score": 4.84
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "session_id": "f6bacdf3564c",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 1.0,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9892920921331548,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 13000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 5998.3
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "session_id": "7ef7daf3494f",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9999459926550012,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9875316989200588,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 12000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 9300.53
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "session_id": "313d34469ce8",
+      "entity_id": "user_471233c5",
+      "entity_type": "user",
+      "risk_score": 0.999891985310002,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9892978680742875,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 12000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 8836.03
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "session_id": "5c50d05fdc8a",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9998379779650032,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9872510115273124,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 7000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 3208.92
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "session_id": "6056b22b4eb7",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9997839706200043,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9843792454145436,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 9000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 10902.7
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "session_id": "e71b4ab343f3",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9997299632750054,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9522691133574764,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + session duration far from this entity's norm.",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 10000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "session_duration_sec",
+          "z_score": 2.54
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "session_id": "c6108cebead8",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9996759559300064,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9859260756747348,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 6000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 10902.7
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "session_id": "802bccaa4140",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9996219485850076,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.986983149043724,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 13000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 5154.55
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "session_id": "8bdfc6c45c08",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9995679412400088,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.986983149043724,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 14000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 2153.96
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "session_id": "65340d7ef6bb",
+      "entity_id": "user_9f48adab",
+      "entity_type": "user",
+      "risk_score": 0.9995139338950098,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.98747035042135,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 10000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 7573.97
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "session_id": "f047ea7e745d",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9994599265500108,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9799836894493964,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 11000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 10256.4
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "session_id": "acd3a626c309",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.999405919205012,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.989355923079392,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 20000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 4822.15
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "session_id": "88cd8d90fc0d",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9993519118600128,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9880511621519588,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 12000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1543.38
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "session_id": "a6610362cd5f",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.999297904515014,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.98747035042135,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 11000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 9300.53
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "session_id": "e136439708e6",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9992438971700152,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.98747035042135,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 10000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 9837.07
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "session_id": "bdabc5fef223",
+      "entity_id": "user_471233c5",
+      "entity_type": "user",
+      "risk_score": 0.9991898898250162,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9889689977076714,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 13000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 614.62
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "session_id": "cfedb900117f",
+      "entity_id": "user_471233c5",
+      "entity_type": "user",
+      "risk_score": 0.9991358824800172,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9086526117033724,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + session duration far from this entity's norm.",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 14000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "session_duration_sec",
+          "z_score": 2.55
+        }
+      ]
+    },
+    {
+      "rank": 19,
+      "session_id": "fe65e422fe61",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9990818751350184,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9892920921331548,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 15000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 2504.85
+        }
+      ]
+    },
+    {
+      "rank": 20,
+      "session_id": "5d0fcac1f356",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9990278677900194,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.892364165354817,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 14000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 136.52
+        }
+      ]
+    },
+    {
+      "rank": 21,
+      "session_id": "9bba61695823",
+      "entity_id": "user_9f48adab",
+      "entity_type": "user",
+      "risk_score": 0.9989738604450206,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.98747035042135,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 11000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 375.92
+        }
+      ]
+    },
+    {
+      "rank": 22,
+      "session_id": "aa500407fcbe",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.9989198531000216,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9892185860106976,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 18000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 4751.38
+        }
+      ]
+    },
+    {
+      "rank": 23,
+      "session_id": "5b38e02295c3",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.9988658457550228,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9892185860106976,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 19000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 5789.83
+        }
+      ]
+    },
+    {
+      "rank": 24,
+      "session_id": "d058568a663d",
+      "entity_id": "user_471233c5",
+      "entity_type": "user",
+      "risk_score": 0.9988118384100236,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9879830598378722,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 11000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 8044.03
+        }
+      ]
+    },
+    {
+      "rank": 25,
+      "session_id": "5471afdf626b",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.9987578310650248,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9907989978081376,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 17000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 5597.11
+        }
+      ]
+    },
+    {
+      "rank": 26,
+      "session_id": "b48d19af4946",
+      "entity_id": "user_9f48adab",
+      "entity_type": "user",
+      "risk_score": 0.998703823720026,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9880511621519588,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 12000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 7444.85
+        }
+      ]
+    },
+    {
+      "rank": 27,
+      "session_id": "70d11b990601",
+      "entity_id": "user_9f48adab",
+      "entity_type": "user",
+      "risk_score": 0.998649816375027,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9861454145687724,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 9000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 4930.51
+        }
+      ]
+    },
+    {
+      "rank": 28,
+      "session_id": "5374c2af5553",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.998595809030028,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.989355923079392,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 21000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 7541.45
+        }
+      ]
+    },
+    {
+      "rank": 29,
+      "session_id": "9daa3eb67122",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.9985418016850292,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9907989978081376,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 16000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 10574.98
+        }
+      ]
+    },
+    {
+      "rank": 30,
+      "session_id": "f8cf02f3916d",
+      "entity_id": "user_b3163d00",
+      "entity_type": "user",
+      "risk_score": 0.9984877943400302,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9877637209438346,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 7000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1922.13
+        }
+      ]
+    },
+    {
+      "rank": 31,
+      "session_id": "b698cc6e58f5",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9984337869950312,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9892920921331548,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 15000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 4957.47
+        }
+      ]
+    },
+    {
+      "rank": 32,
+      "session_id": "6f06e6c4e364",
+      "entity_id": "user_b3163d00",
+      "entity_type": "user",
+      "risk_score": 0.9983797796500324,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9872510115273124,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 6000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 3368.02
+        }
+      ]
+    },
+    {
+      "rank": 33,
+      "session_id": "9ac67741833a",
+      "entity_id": "user_ff26c9ec",
+      "entity_type": "user",
+      "risk_score": 0.9983257723050336,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9859260756747348,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 6000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 5029.59
+        }
+      ]
+    },
+    {
+      "rank": 34,
+      "session_id": "d2430073960a",
+      "entity_id": "user_b3163d00",
+      "entity_type": "user",
+      "risk_score": 0.9982717649600346,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9872510115273124,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 5000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 9300.53
+        }
+      ]
+    },
+    {
+      "rank": 35,
+      "session_id": "124e567770e1",
+      "entity_id": "user_ff26c9ec",
+      "entity_type": "user",
+      "risk_score": 0.9982177576150356,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9872510115273124,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 7000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1922.0
+        }
+      ]
+    },
+    {
+      "rank": 36,
+      "session_id": "b2976c77c874",
+      "entity_id": "user_9f48adab",
+      "entity_type": "user",
+      "risk_score": 0.9981637502700368,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9861454145687724,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 8000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 6348.5
+        }
+      ]
+    },
+    {
+      "rank": 37,
+      "session_id": "8aded2bf1ccc",
+      "entity_id": "user_471233c5",
+      "entity_type": "user",
+      "risk_score": 0.9981097429250378,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.98596967539852,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 15000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 940.74
+        }
+      ]
+    },
+    {
+      "rank": 38,
+      "session_id": "aeb938ec8c00",
+      "entity_id": "user_9f48adab",
+      "entity_type": "user",
+      "risk_score": 0.9980557355800388,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9521403816252036,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + session duration far from this entity's norm.",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 13000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "session_duration_sec",
+          "z_score": 2.55
+        }
+      ]
+    },
+    {
+      "rank": 39,
+      "session_id": "4b4af9406277",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.99800172823504,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9861454145687724,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 9000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 3362.34
+        }
+      ]
+    },
+    {
+      "rank": 40,
+      "session_id": "5bf8e9ed8105",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.997947720890041,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9895895989422898,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 16000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 2776.84
+        }
+      ]
+    },
+    {
+      "rank": 41,
+      "session_id": "dbb998fe1239",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.997893713545042,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9867238855644778,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 22000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 365.41
+        }
+      ]
+    },
+    {
+      "rank": 42,
+      "session_id": "10042a0d1a11",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9978397062000433,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9861454145687724,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 8000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1631.01
+        }
+      ]
+    },
+    {
+      "rank": 43,
+      "session_id": "a27791831ed1",
+      "entity_id": "user_ff26c9ec",
+      "entity_type": "user",
+      "risk_score": 0.9977856988550444,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9830976838886922,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 5000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 4930.51
+        }
+      ]
+    },
+    {
+      "rank": 44,
+      "session_id": "45349267a576",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9977316915100454,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9788191117777382,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 5000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 408.62
+        }
+      ]
+    },
+    {
+      "rank": 45,
+      "session_id": "5492908de3e0",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9976776841650464,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.97645993656367,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 4000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1735.06
+        }
+      ]
+    },
+    {
+      "rank": 46,
+      "session_id": "436ba584f6d1",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.9976236768200476,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9872510115273124,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 7000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 8569.46
+        }
+      ]
+    },
+    {
+      "rank": 47,
+      "session_id": "f30797691d08",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9975696694750488,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9861454145687724,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 8000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1990.1
+        }
+      ]
+    },
+    {
+      "rank": 48,
+      "session_id": "b75e031527c4",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9975156621300496,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9775202393354484,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 3000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 10902.7
+        }
+      ]
+    },
+    {
+      "rank": 49,
+      "session_id": "03a630852f8f",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9974616547850508,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.97645993656367,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 6000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 9837.07
+        }
+      ]
+    },
+    {
+      "rank": 50,
+      "session_id": "3ab9500081b3",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9974076474400518,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.984159906520506,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 7000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 2974.11
+        }
+      ]
+    },
+    {
+      "rank": 51,
+      "session_id": "34f78c926f49",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.9973536400950528,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9868974949501328,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 6000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 789.37
+        }
+      ]
+    },
+    {
+      "rank": 52,
+      "session_id": "dfaa0650b564",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.997299632750054,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9911220922336212,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 17000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 78.61
+        }
+      ]
+    },
+    {
+      "rank": 53,
+      "session_id": "554e881d6380",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.9972456254050552,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9907989978081376,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 16000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 157.67
+        }
+      ]
+    },
+    {
+      "rank": 54,
+      "session_id": "456a28e040e0",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.9971916180600562,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9905014909990028,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 15000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1042.48
+        }
+      ]
+    },
+    {
+      "rank": 55,
+      "session_id": "dc02602f482a",
+      "entity_id": "user_471233c5",
+      "entity_type": "user",
+      "risk_score": 0.9971376107150572,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9879830598378722,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 10000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 8576.34
+        }
+      ]
+    },
+    {
+      "rank": 56,
+      "session_id": "0b74b3e02292",
+      "entity_id": "user_9f48adab",
+      "entity_type": "user",
+      "risk_score": 0.9970836033700584,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9880453862108262,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 14000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 2042.08
+        }
+      ]
+    },
+    {
+      "rank": 57,
+      "session_id": "f87a1c9eda47",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.9970295960250594,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9879218851940352,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 7000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 228.86
+        }
+      ]
+    },
+    {
+      "rank": 58,
+      "session_id": "65aa17e725b6",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.9969755886800604,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9743547436051314,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 23000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 241.63
+        }
+      ]
+    },
+    {
+      "rank": 59,
+      "session_id": "7e35ca1879a1",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.9969215813350616,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9795514627578225,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 8000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 105.97
+        }
+      ]
+    },
+    {
+      "rank": 60,
+      "session_id": "496f4a8dedfd",
+      "entity_id": "user_9f48adab",
+      "entity_type": "user",
+      "risk_score": 0.9968675739900626,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9859260756747348,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 7000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 9010.25
+        }
+      ]
+    },
+    {
+      "rank": 61,
+      "session_id": "4a259820d504",
+      "entity_id": "user_ff26c9ec",
+      "entity_type": "user",
+      "risk_score": 0.9968135666450636,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9859260756747348,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 4000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 4663.97
+        }
+      ]
+    },
+    {
+      "rank": 62,
+      "session_id": "17257b418fd4",
+      "entity_id": "user_1a61615c",
+      "entity_type": "user",
+      "risk_score": 0.9967595593000648,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9889210792015626,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 13000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1492.53
+        }
+      ]
+    },
+    {
+      "rank": 63,
+      "session_id": "9ac105bb7c8f",
+      "entity_id": "user_1a61615c",
+      "entity_type": "user",
+      "risk_score": 0.996705551955066,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9879830598378722,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 11000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 4061.68
+        }
+      ]
+    },
+    {
+      "rank": 64,
+      "session_id": "16d434a38b9d",
+      "entity_id": "user_b3163d00",
+      "entity_type": "user",
+      "risk_score": 0.996651544610067,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9146694677343732,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + session duration far from this entity's norm.",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 8000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "session_duration_sec",
+          "z_score": 2.56
+        }
+      ]
+    },
+    {
+      "rank": 65,
+      "session_id": "fe37db226a55",
+      "entity_id": "user_1a61615c",
+      "entity_type": "user",
+      "risk_score": 0.996597537265068,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.8793857862996233,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + session duration far from this entity's norm.",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 12000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "session_duration_sec",
+          "z_score": 2.54
+        }
+      ]
+    },
+    {
+      "rank": 66,
+      "session_id": "3d8afa9ad6b6",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.9965435299200692,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9867363539155434,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 8000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 3238.29
+        }
+      ]
+    },
+    {
+      "rank": 67,
+      "session_id": "f1e7b780514e",
+      "entity_id": "user_b3163d00",
+      "entity_type": "user",
+      "risk_score": 0.9964895225750702,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9879830598378722,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 9000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1051.87
+        }
+      ]
+    },
+    {
+      "rank": 68,
+      "session_id": "c02f04b78280",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.9964355152300712,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.984032530307164,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 5000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 333.58
+        }
+      ]
+    },
+    {
+      "rank": 69,
+      "session_id": "d9f93fee9c3e",
+      "entity_id": "user_471233c5",
+      "entity_type": "user",
+      "risk_score": 0.9963815078850724,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.98747035042135,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 8000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 6581.37
+        }
+      ]
+    },
+    {
+      "rank": 70,
+      "session_id": "0ca1f9d48c85",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.9963275005400736,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9621233657914574,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 4000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1591.31
+        }
+      ]
+    },
+    {
+      "rank": 71,
+      "session_id": "4f9c2aa1e544",
+      "entity_id": "user_ff26c9ec",
+      "entity_type": "user",
+      "risk_score": 0.9962734931950744,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9889689977076714,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 13000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 2432.61
+        }
+      ]
+    },
+    {
+      "rank": 72,
+      "session_id": "af7220c2fc23",
+      "entity_id": "user_ff26c9ec",
+      "entity_type": "user",
+      "risk_score": 0.9962194858500756,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9875316989200588,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 12000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 7676.24
+        }
+      ]
+    },
+    {
+      "rank": 73,
+      "session_id": "3b48e0f9de2c",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.9961654785050766,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9810940774927792,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 9000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 408.62
+        }
+      ]
+    },
+    {
+      "rank": 74,
+      "session_id": "f7e8c91b8f9a",
+      "entity_id": "user_1a61615c",
+      "entity_type": "user",
+      "risk_score": 0.9961114711600778,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9879830598378722,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 10000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1413.92
+        }
+      ]
+    },
+    {
+      "rank": 75,
+      "session_id": "7d7e08389a72",
+      "entity_id": "user_b3163d00",
+      "entity_type": "user",
+      "risk_score": 0.9960574638150788,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9908245854244864,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 14000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 8044.03
+        }
+      ]
+    },
+    {
+      "rank": 76,
+      "session_id": "8d9cddcf56c5",
+      "entity_id": "user_b3163d00",
+      "entity_type": "user",
+      "risk_score": 0.99600345647008,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9905014909990028,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 15000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 2395.31
+        }
+      ]
+    },
+    {
+      "rank": 77,
+      "session_id": "092524d88b6e",
+      "entity_id": "user_1a61615c",
+      "entity_type": "user",
+      "risk_score": 0.995949449125081,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9879830598378722,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 9000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 9300.53
+        }
+      ]
+    },
+    {
+      "rank": 78,
+      "session_id": "1f6201da82ea",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.995895441780082,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.98596967539852,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 14000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 302.05
+        }
+      ]
+    },
+    {
+      "rank": 79,
+      "session_id": "37939160f9e8",
+      "entity_id": "user_b3163d00",
+      "entity_type": "user",
+      "risk_score": 0.9958414344350832,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "credential_stuffing",
+      "classifier_confidence": 0.9673550801473872,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + one source IP touching many different accounts (credential stuffing pattern) + failed authentication attempt(s).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 3000000.0
+        },
+        {
+          "feature": "ip_unique_entities_5min",
+          "z_score": 2000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        }
+      ]
+    },
+    {
+      "rank": 80,
+      "session_id": "d913f7534aab",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.9957874270900844,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9879830598378722,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 11000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1687.0
+        }
+      ]
+    },
+    {
+      "rank": 81,
+      "session_id": "4ca4e5742eea",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.9957334197450852,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9777217720523164,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 24000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 2617.71
+        }
+      ]
+    },
+    {
+      "rank": 82,
+      "session_id": "544f9fda01fe",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.9956794124000864,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9905014909990028,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 13000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1511.84
+        }
+      ]
+    },
+    {
+      "rank": 83,
+      "session_id": "9d4fde77446a",
+      "entity_id": "user_ff26c9ec",
+      "entity_type": "user",
+      "risk_score": 0.9956254050550876,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9699792542928706,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 3000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 8569.46
+        }
+      ]
+    },
+    {
+      "rank": 84,
+      "session_id": "caac7445c79f",
+      "entity_id": "svc_c0fa647c",
+      "entity_type": "service_account",
+      "risk_score": 0.9955713977100886,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9872510115273124,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 6000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 5181.05
+        }
+      ]
+    },
+    {
+      "rank": 85,
+      "session_id": "0b2e0a41afca",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.9955173903650896,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9879830598378722,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 10000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1296.41
+        }
+      ]
+    },
+    {
+      "rank": 86,
+      "session_id": "d507b299fd76",
+      "entity_id": "user_ff26c9ec",
+      "entity_type": "user",
+      "risk_score": 0.9954633830200909,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9892920921331548,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 14000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1348.46
+        }
+      ]
+    },
+    {
+      "rank": 87,
+      "session_id": "88fe261b6bb8",
+      "entity_id": "user_ff26c9ec",
+      "entity_type": "user",
+      "risk_score": 0.9954093756750918,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.98747035042135,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 8000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 2407.86
+        }
+      ]
+    },
+    {
+      "rank": 88,
+      "session_id": "e17f2d043f33",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.9953553683300927,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9867363539155434,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 8000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 478.85
+        }
+      ]
+    },
+    {
+      "rank": 89,
+      "session_id": "05aef5500dda",
+      "entity_id": "svc_c0fa647c",
+      "entity_type": "service_account",
+      "risk_score": 0.995301360985094,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.985670599729872,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 5000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 5624.51
+        }
+      ]
+    },
+    {
+      "rank": 90,
+      "session_id": "a6660b9d10e6",
+      "entity_id": "user_9f48adab",
+      "entity_type": "user",
+      "risk_score": 0.9952473536400952,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9892185860106976,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 18000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 8576.34
+        }
+      ]
+    },
+    {
+      "rank": 91,
+      "session_id": "1563ffb184c9",
+      "entity_id": "user_471233c5",
+      "entity_type": "user",
+      "risk_score": 0.995193346295096,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "device_spoofing",
+      "classifier_confidence": 0.3874455487978904,
+      "ground_truth": "normal",
+      "reason_string": "Flagged due to: unusually long command sequence + session duration far from this entity's norm.",
+      "top_features": [
+        {
+          "feature": "cmd_seq_len",
+          "z_score": 1.4
+        },
+        {
+          "feature": "session_duration_sec",
+          "z_score": 1.0
+        }
+      ]
+    },
+    {
+      "rank": 92,
+      "session_id": "ecf6913b7770",
+      "entity_id": "user_b3163d00",
+      "entity_type": "user",
+      "risk_score": 0.9951393389500972,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "device_spoofing",
+      "classifier_confidence": 0.4004265032503686,
+      "ground_truth": "normal",
+      "reason_string": "Flagged due to: session duration far from this entity's norm.",
+      "top_features": [
+        {
+          "feature": "session_duration_sec",
+          "z_score": 1.22
+        }
+      ]
+    },
+    {
+      "rank": 93,
+      "session_id": "8a2534c30952",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.9950853316050984,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9872510115273124,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 6000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 352.76
+        }
+      ]
+    },
+    {
+      "rank": 94,
+      "session_id": "2d6aa01c40c5",
+      "entity_id": "user_ff26c9ec",
+      "entity_type": "user",
+      "risk_score": 0.9950313242600992,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9892920921331548,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 15000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1620.76
+        }
+      ]
+    },
+    {
+      "rank": 95,
+      "session_id": "d91e23bdcdc8",
+      "entity_id": "user_9f48adab",
+      "entity_type": "user",
+      "risk_score": 0.9949773169151004,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "low_and_slow_exfiltration",
+      "classifier_confidence": 0.3640135680134947,
+      "ground_truth": "normal",
+      "reason_string": "Flagged due to: unusually long command sequence + unusually high number of resources touched in one session.",
+      "top_features": [
+        {
+          "feature": "cmd_seq_len",
+          "z_score": 1.4
+        },
+        {
+          "feature": "n_resources_this_session",
+          "z_score": 1.39
+        }
+      ]
+    },
+    {
+      "rank": 96,
+      "session_id": "def8472b5685",
+      "entity_id": "user_9f48adab",
+      "entity_type": "user",
+      "risk_score": 0.9949233095701016,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "lateral_movement",
+      "classifier_confidence": 0.4414941537087299,
+      "ground_truth": "normal",
+      "reason_string": "Flagged due to: session duration far from this entity's norm.",
+      "top_features": [
+        {
+          "feature": "session_duration_sec",
+          "z_score": 2.4
+        }
+      ]
+    },
+    {
+      "rank": 97,
+      "session_id": "1bbda0da4ff7",
+      "entity_id": "user_9f48adab",
+      "entity_type": "user",
+      "risk_score": 0.9948693022251026,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "device_spoofing",
+      "classifier_confidence": 0.3523275053251938,
+      "ground_truth": "normal",
+      "reason_string": "Flagged due to: session duration far from this entity's norm + unusually high number of resources touched in one session + login at an unusual hour for this entity.",
+      "top_features": [
+        {
+          "feature": "session_duration_sec",
+          "z_score": 1.53
+        },
+        {
+          "feature": "n_resources_this_session",
+          "z_score": 1.31
+        },
+        {
+          "feature": "hour_z",
+          "z_score": 1.01
+        }
+      ]
+    },
+    {
+      "rank": 98,
+      "session_id": "867a46ae809b",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.9948152948801036,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9872510115273124,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 5000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 188.48
+        }
+      ]
+    },
+    {
+      "rank": 99,
+      "session_id": "40092a0d5803",
+      "entity_id": "user_9f48adab",
+      "entity_type": "user",
+      "risk_score": 0.9947612875351048,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "impossible_travel",
+      "classifier_confidence": 0.3302760146971168,
+      "ground_truth": "normal",
+      "reason_string": "No strong deviation from baseline; low-confidence flag.",
+      "top_features": []
+    },
+    {
+      "rank": 100,
+      "session_id": "98bcd7024ce9",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.994707280190106,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9830976838886922,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 4000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1114.96
+        }
+      ]
+    },
+    {
+      "rank": 101,
+      "session_id": "ed724d139871",
+      "entity_id": "svc_c0fa647c",
+      "entity_type": "service_account",
+      "risk_score": 0.994653272845107,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9730285170499068,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 3000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 6148.07
+        }
+      ]
+    },
+    {
+      "rank": 102,
+      "session_id": "940157d8dac9",
+      "entity_id": "svc_c0fa647c",
+      "entity_type": "service_account",
+      "risk_score": 0.994599265500108,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.888709234617405,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + login at an unusual hour for this entity.",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 4000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "hour_z",
+          "z_score": 2.71
+        }
+      ]
+    },
+    {
+      "rank": 103,
+      "session_id": "fee7a2086bdd",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.9945452581551092,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9877637209438346,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 7000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 843.6
+        }
+      ]
+    },
+    {
+      "rank": 104,
+      "session_id": "5e34d2904756",
+      "entity_id": "user_ff26c9ec",
+      "entity_type": "user",
+      "risk_score": 0.99449125081011,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.98747035042135,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 9000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 3573.98
+        }
+      ]
+    },
+    {
+      "rank": 105,
+      "session_id": "bec26e96a463",
+      "entity_id": "user_8726aaaf",
+      "entity_type": "user",
+      "risk_score": 0.9944372434651112,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9830976838886922,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 6000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 2315.22
+        }
+      ]
+    },
+    {
+      "rank": 106,
+      "session_id": "a0e835c03e14",
+      "entity_id": "svc_c0fa647c",
+      "entity_type": "service_account",
+      "risk_score": 0.9943832361201124,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.98747035042135,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 10000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 9092.77
+        }
+      ]
+    },
+    {
+      "rank": 107,
+      "session_id": "69c10379e72b",
+      "entity_id": "user_8726aaaf",
+      "entity_type": "user",
+      "risk_score": 0.9943292287751134,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9843792454145436,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 9000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 3630.45
+        }
+      ]
+    },
+    {
+      "rank": 108,
+      "session_id": "a27bcf1fa31a",
+      "entity_id": "user_b3163d00",
+      "entity_type": "user",
+      "risk_score": 0.9942752214301144,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "device_spoofing",
+      "classifier_confidence": 0.3561250396086996,
+      "ground_truth": "normal",
+      "reason_string": "Flagged due to: unusually long command sequence.",
+      "top_features": [
+        {
+          "feature": "cmd_seq_len",
+          "z_score": 1.4
+        }
+      ]
+    },
+    {
+      "rank": 109,
+      "session_id": "bbb8f8690938",
+      "entity_id": "user_ff26c9ec",
+      "entity_type": "user",
+      "risk_score": 0.9942212140851155,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "lateral_movement",
+      "classifier_confidence": 0.4772186992383851,
+      "ground_truth": "normal",
+      "reason_string": "Flagged due to: session duration far from this entity's norm.",
+      "top_features": [
+        {
+          "feature": "session_duration_sec",
+          "z_score": 2.36
+        }
+      ]
+    },
+    {
+      "rank": 110,
+      "session_id": "eada8b2062cb",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.9941672067401166,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.985670599729872,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 5000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 3321.12
+        }
+      ]
+    },
+    {
+      "rank": 111,
+      "session_id": "734e82865aaa",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.9941131993951178,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9312451968580884,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + session duration far from this entity's norm.",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 6000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "session_duration_sec",
+          "z_score": 2.54
+        }
+      ]
+    },
+    {
+      "rank": 112,
+      "session_id": "da32060da245",
+      "entity_id": "user_8726aaaf",
+      "entity_type": "user",
+      "risk_score": 0.9940591920501188,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9843456638772944,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 5000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 5488.42
+        }
+      ]
+    },
+    {
+      "rank": 113,
+      "session_id": "187645f2b584",
+      "entity_id": "svc_c0fa647c",
+      "entity_type": "service_account",
+      "risk_score": 0.99400518470512,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9879830598378722,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 11000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1153.56
+        }
+      ]
+    },
+    {
+      "rank": 114,
+      "session_id": "17d401c9b510",
+      "entity_id": "svc_c0fa647c",
+      "entity_type": "service_account",
+      "risk_score": 0.993951177360121,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9783735971849772,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 2000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 16970.41
+        }
+      ]
+    },
+    {
+      "rank": 115,
+      "session_id": "0f29084921eb",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.993897170015122,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "impossible_travel",
+      "classifier_confidence": 0.3427638104315366,
+      "ground_truth": "normal",
+      "reason_string": "Flagged due to: unusually long command sequence.",
+      "top_features": [
+        {
+          "feature": "cmd_seq_len",
+          "z_score": 1.4
+        }
+      ]
+    },
+    {
+      "rank": 116,
+      "session_id": "eb460cde6ffa",
+      "entity_id": "user_b3163d00",
+      "entity_type": "user",
+      "risk_score": 0.9938431626701232,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9859260756747348,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 4000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 2081.94
+        }
+      ]
+    },
+    {
+      "rank": 117,
+      "session_id": "3c19376cff22",
+      "entity_id": "svc_c0fa647c",
+      "entity_type": "service_account",
+      "risk_score": 0.9937891553251242,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "impossible_travel",
+      "classifier_confidence": 0.3347874258189426,
+      "ground_truth": "normal",
+      "reason_string": "No strong deviation from baseline; low-confidence flag.",
+      "top_features": []
+    },
+    {
+      "rank": 118,
+      "session_id": "e2505104d806",
+      "entity_id": "user_471233c5",
+      "entity_type": "user",
+      "risk_score": 0.9937351479801252,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9879830598378722,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 9000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 333.39
+        }
+      ]
+    },
+    {
+      "rank": 119,
+      "session_id": "e2b5d1b0c77f",
+      "entity_id": "user_471233c5",
+      "entity_type": "user",
+      "risk_score": 0.9936811406351264,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9872510115273124,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 7000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 408.62
+        }
+      ]
+    },
+    {
+      "rank": 120,
+      "session_id": "a89656b0f62b",
+      "entity_id": "svc_c0fa647c",
+      "entity_type": "service_account",
+      "risk_score": 0.9936271332901274,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "device_spoofing",
+      "classifier_confidence": 0.375831556048198,
+      "ground_truth": "normal",
+      "reason_string": "Flagged due to: unusually high number of resources touched in one session + login at an unusual hour for this entity.",
+      "top_features": [
+        {
+          "feature": "n_resources_this_session",
+          "z_score": 1.1
+        },
+        {
+          "feature": "hour_z",
+          "z_score": 1.1
+        }
+      ]
+    },
+    {
+      "rank": 121,
+      "session_id": "7c6e1c23b673",
+      "entity_id": "user_471233c5",
+      "entity_type": "user",
+      "risk_score": 0.9935731259451286,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9859260756747348,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 5000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 4305.21
+        }
+      ]
+    },
+    {
+      "rank": 122,
+      "session_id": "021e7474aa6e",
+      "entity_id": "user_471233c5",
+      "entity_type": "user",
+      "risk_score": 0.9935191186001296,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9342457251201064,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + session duration far from this entity's norm.",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 6000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "session_duration_sec",
+          "z_score": 2.54
+        }
+      ]
+    },
+    {
+      "rank": 123,
+      "session_id": "66b70c671bab",
+      "entity_id": "svc_c0fa647c",
+      "entity_type": "service_account",
+      "risk_score": 0.9934651112551308,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.98747035042135,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 9000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 13778.89
+        }
+      ]
+    },
+    {
+      "rank": 124,
+      "session_id": "798dd230df23",
+      "entity_id": "user_9f48adab",
+      "entity_type": "user",
+      "risk_score": 0.9934111039101318,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9855531389732306,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 15000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 197.12
+        }
+      ]
+    },
+    {
+      "rank": 125,
+      "session_id": "ff851b6eedc7",
+      "entity_id": "user_9f48adab",
+      "entity_type": "user",
+      "risk_score": 0.9933570965651328,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.8977661189614063,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + session duration far from this entity's norm.",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 16000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "session_duration_sec",
+          "z_score": 2.56
+        }
+      ]
+    },
+    {
+      "rank": 126,
+      "session_id": "8e3b193b7279",
+      "entity_id": "user_ff26c9ec",
+      "entity_type": "user",
+      "risk_score": 0.993303089220134,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9879830598378722,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 10000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 3300.84
+        }
+      ]
+    },
+    {
+      "rank": 127,
+      "session_id": "851dcc06ac98",
+      "entity_id": "user_b3163d00",
+      "entity_type": "user",
+      "risk_score": 0.993249081875135,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9859260756747348,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 3000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 7638.84
+        }
+      ]
+    },
+    {
+      "rank": 128,
+      "session_id": "b3111850aed8",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.993195074530136,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9809968608276504,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 16000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 397.41
+        }
+      ]
+    },
+    {
+      "rank": 129,
+      "session_id": "21f809f0b44e",
+      "entity_id": "user_8726aaaf",
+      "entity_type": "user",
+      "risk_score": 0.9931410671851372,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9833170227827298,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 8000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 4333.53
+        }
+      ]
+    },
+    {
+      "rank": 130,
+      "session_id": "f589bc4f90fb",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.9930870598401382,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9859260756747348,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 4000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 2837.81
+        }
+      ]
+    },
+    {
+      "rank": 131,
+      "session_id": "bbb21a206178",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.9930330524951392,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9908245854244864,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 14000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 5915.25
+        }
+      ]
+    },
+    {
+      "rank": 132,
+      "session_id": "2fb57f59d0cc",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.9929790451501403,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9905014909990028,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 15000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 944.71
+        }
+      ]
+    },
+    {
+      "rank": 133,
+      "session_id": "8bd32232497c",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9929250378051416,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "impossible_travel",
+      "classifier_confidence": 0.3987175124901151,
+      "ground_truth": "normal",
+      "reason_string": "Flagged due to: unusually high number of resources touched in one session.",
+      "top_features": [
+        {
+          "feature": "n_resources_this_session",
+          "z_score": 1.39
+        }
+      ]
+    },
+    {
+      "rank": 134,
+      "session_id": "ddac9d184eca",
+      "entity_id": "user_8726aaaf",
+      "entity_type": "user",
+      "risk_score": 0.9928710304601426,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9859260756747348,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 7000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1876.37
+        }
+      ]
+    },
+    {
+      "rank": 135,
+      "session_id": "ff523f44d365",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9928170231151436,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9907989978081376,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 17000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1099.05
+        }
+      ]
+    },
+    {
+      "rank": 136,
+      "session_id": "a603bcc962ea",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.9927630157701448,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9859260756747348,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 3000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 5861.04
+        }
+      ]
+    },
+    {
+      "rank": 137,
+      "session_id": "fc1b667d9c3e",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.992709008425146,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9879830598378722,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 10000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 476.67
+        }
+      ]
+    },
+    {
+      "rank": 138,
+      "session_id": "cd8ce050c5f1",
+      "entity_id": "user_471233c5",
+      "entity_type": "user",
+      "risk_score": 0.9926550010801468,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9859260756747348,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 4000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 6076.15
+        }
+      ]
+    },
+    {
+      "rank": 139,
+      "session_id": "04f099c01726",
+      "entity_id": "user_8726aaaf",
+      "entity_type": "user",
+      "risk_score": 0.992600993735148,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.98747035042135,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 10000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 769.3
+        }
+      ]
+    },
+    {
+      "rank": 140,
+      "session_id": "e69c72ee03a3",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.992546986390149,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "impossible_travel",
+      "classifier_confidence": 0.4376228978161928,
+      "ground_truth": "normal",
+      "reason_string": "No strong deviation from baseline; low-confidence flag.",
+      "top_features": []
+    },
+    {
+      "rank": 141,
+      "session_id": "5e603d0df95b",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.99249297904515,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9879830598378722,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 11000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 122.95
+        }
+      ]
+    },
+    {
+      "rank": 142,
+      "session_id": "89e955247d88",
+      "entity_id": "user_ff26c9ec",
+      "entity_type": "user",
+      "risk_score": 0.9924389717001512,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9879830598378722,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 11000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 2656.41
+        }
+      ]
+    },
+    {
+      "rank": 143,
+      "session_id": "888408dc9a86",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.9923849643551524,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "impossible_travel",
+      "classifier_confidence": 0.3522882470144496,
+      "ground_truth": "normal",
+      "reason_string": "Flagged due to: unusually long command sequence.",
+      "top_features": [
+        {
+          "feature": "cmd_seq_len",
+          "z_score": 1.4
+        }
+      ]
+    },
+    {
+      "rank": 144,
+      "session_id": "9af0260ffae2",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.9923309570101534,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9445487776924384,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + session duration far from this entity's norm.",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 9000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "session_duration_sec",
+          "z_score": 2.49
+        }
+      ]
+    },
+    {
+      "rank": 145,
+      "session_id": "c104a82498a7",
+      "entity_id": "user_8726aaaf",
+      "entity_type": "user",
+      "risk_score": 0.9922769496651545,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9784984879664684,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 4000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 542.17
+        }
+      ]
+    },
+    {
+      "rank": 146,
+      "session_id": "53cd3437e9dc",
+      "entity_id": "user_8726aaaf",
+      "entity_type": "user",
+      "risk_score": 0.9922229423201556,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9523440710738568,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + session duration far from this entity's norm.",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 11000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "session_duration_sec",
+          "z_score": 2.55
+        }
+      ]
+    },
+    {
+      "rank": 147,
+      "session_id": "3a668f33bff6",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.9921875,
+      "detection_method": "cold_start_isolation_forest",
+      "predicted_attack": "lateral_movement",
+      "classifier_confidence": 0.4199071969986204,
+      "ground_truth": "normal",
+      "reason_string": "Flagged due to: accessed resources never touched before + new entity with little to no history (cold start) + login at an unusual hour for this entity.",
+      "top_features": [
+        {
+          "feature": "resource_novelty",
+          "z_score": 5.71
+        },
+        {
+          "feature": "is_cold_start",
+          "z_score": 4.84
+        },
+        {
+          "feature": "hour_z",
+          "z_score": 4.67
+        }
+      ]
+    },
+    {
+      "rank": 148,
+      "session_id": "a613809c3ad1",
+      "entity_id": "user_8726aaaf",
+      "entity_type": "user",
+      "risk_score": 0.9921689349751566,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9775202393354484,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 3000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 4042.18
+        }
+      ]
+    },
+    {
+      "rank": 149,
+      "session_id": "2b01018eb2ca",
+      "entity_id": "user_1a61615c",
+      "entity_type": "user",
+      "risk_score": 0.9921149276301576,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9877637209438346,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 6000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1435.05
+        }
+      ]
+    },
+    {
+      "rank": 150,
+      "session_id": "ed37481056c0",
+      "entity_id": "user_8726aaaf",
+      "entity_type": "user",
+      "risk_score": 0.9920609202851588,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9892978680742875,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 12000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 585.61
+        }
+      ]
+    },
+    {
+      "rank": 151,
+      "session_id": "358d8424cac8",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.99200691294016,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9859204757507652,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 9000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 387.1
+        }
+      ]
+    },
+    {
+      "rank": 152,
+      "session_id": "37a278362e4b",
+      "entity_id": "user_1a61615c",
+      "entity_type": "user",
+      "risk_score": 0.9919529055951608,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9829123786049676,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 4000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 234.73
+        }
+      ]
+    },
+    {
+      "rank": 153,
+      "session_id": "9574373ed0e4",
+      "entity_id": "user_1a61615c",
+      "entity_type": "user",
+      "risk_score": 0.991898898250162,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9236802470428112,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + session duration far from this entity's norm.",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 5000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "session_duration_sec",
+          "z_score": 2.55
+        }
+      ]
+    },
+    {
+      "rank": 154,
+      "session_id": "d55318cf5f22",
+      "entity_id": "user_1a61615c",
+      "entity_type": "user",
+      "risk_score": 0.9918448909051631,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9859260756747348,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 3000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 4211.1
+        }
+      ]
+    },
+    {
+      "rank": 155,
+      "session_id": "8811d0c5b3de",
+      "entity_id": "user_9f48adab",
+      "entity_type": "user",
+      "risk_score": 0.9917908835601642,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9859260756747348,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 6000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 4925.89
+        }
+      ]
+    },
+    {
+      "rank": 156,
+      "session_id": "c8e45b229c51",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.9917368762151652,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9870154218164372,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 12000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 4004.18
+        }
+      ]
+    },
+    {
+      "rank": 157,
+      "session_id": "776673c5e147",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.9916828688701664,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9859260756747348,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 2000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 941.76
+        }
+      ]
+    },
+    {
+      "rank": 158,
+      "session_id": "7b01a06f3d80",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.9916288615251674,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.8921379999143523,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + session duration far from this entity's norm.",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 3000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "session_duration_sec",
+          "z_score": 2.49
+        }
+      ]
+    },
+    {
+      "rank": 159,
+      "session_id": "8c893d0ab857",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9915748541801686,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "device_spoofing",
+      "classifier_confidence": 0.3472973243350539,
+      "ground_truth": "normal",
+      "reason_string": "Flagged due to: unusually high number of resources touched in one session.",
+      "top_features": [
+        {
+          "feature": "n_resources_this_session",
+          "z_score": 1.31
+        }
+      ]
+    },
+    {
+      "rank": 160,
+      "session_id": "f46dd82d00e3",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.9915208468351696,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9677061413923046,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 10000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 140.43
+        }
+      ]
+    },
+    {
+      "rank": 161,
+      "session_id": "627d40a78ce3",
+      "entity_id": "user_b3163d00",
+      "entity_type": "user",
+      "risk_score": 0.9914668394901708,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9905014909990028,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 13000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 2940.68
+        }
+      ]
+    },
+    {
+      "rank": 162,
+      "session_id": "fda6947a492e",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9914128321451716,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9729082692450024,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 5000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 3979.19
+        }
+      ]
+    },
+    {
+      "rank": 163,
+      "session_id": "4de182d3390d",
+      "entity_id": "svc_c0fa647c",
+      "entity_type": "service_account",
+      "risk_score": 0.9913588248001728,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9872510115273124,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 7000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 4031.91
+        }
+      ]
+    },
+    {
+      "rank": 164,
+      "session_id": "0dbca4b37c4c",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.991304817455174,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "device_spoofing",
+      "classifier_confidence": 0.3076493497973032,
+      "ground_truth": "normal",
+      "reason_string": "Flagged due to: session duration far from this entity's norm.",
+      "top_features": [
+        {
+          "feature": "session_duration_sec",
+          "z_score": 1.09
+        }
+      ]
+    },
+    {
+      "rank": 165,
+      "session_id": "ab9e54527a53",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.991250810110175,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9889689977076714,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 13000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1340.41
+        }
+      ]
+    },
+    {
+      "rank": 166,
+      "session_id": "8e5935f99348",
+      "entity_id": "user_b3163d00",
+      "entity_type": "user",
+      "risk_score": 0.991196802765176,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9879830598378722,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 10000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 2504.85
+        }
+      ]
+    },
+    {
+      "rank": 167,
+      "session_id": "01a08493f95a",
+      "entity_id": "user_1a61615c",
+      "entity_type": "user",
+      "risk_score": 0.9911427954201772,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9877637209438346,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 7000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1342.61
+        }
+      ]
+    },
+    {
+      "rank": 168,
+      "session_id": "db3c4742126b",
+      "entity_id": "user_1a61615c",
+      "entity_type": "user",
+      "risk_score": 0.9910887880751782,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9003521927925406,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + session duration far from this entity's norm.",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 14000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "session_duration_sec",
+          "z_score": 2.55
+        }
+      ]
+    },
+    {
+      "rank": 169,
+      "session_id": "30d3af05102a",
+      "entity_id": "user_b3163d00",
+      "entity_type": "user",
+      "risk_score": 0.9910347807301793,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.990830361365619,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 12000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 3126.89
+        }
+      ]
+    },
+    {
+      "rank": 170,
+      "session_id": "3a9d5a98911f",
+      "entity_id": "user_8726aaaf",
+      "entity_type": "user",
+      "risk_score": 0.9909807733851804,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9745990305499924,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 2000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 4413.13
+        }
+      ]
+    },
+    {
+      "rank": 171,
+      "session_id": "5f98a6e5cc21",
+      "entity_id": "svc_c0fa647c",
+      "entity_type": "service_account",
+      "risk_score": 0.9909267660401816,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "device_spoofing",
+      "classifier_confidence": 0.3607548802455193,
+      "ground_truth": "normal",
+      "reason_string": "Flagged due to: unusually long command sequence + login at an unusual hour for this entity.",
+      "top_features": [
+        {
+          "feature": "cmd_seq_len",
+          "z_score": 1.43
+        },
+        {
+          "feature": "hour_z",
+          "z_score": 1.12
+        }
+      ]
+    },
+    {
+      "rank": 172,
+      "session_id": "136e98b27af8",
+      "entity_id": "user_1a61615c",
+      "entity_type": "user",
+      "risk_score": 0.9908727586951824,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "impossible_travel",
+      "classifier_confidence": 0.3801461255646547,
+      "ground_truth": "normal",
+      "reason_string": "No strong deviation from baseline; low-confidence flag.",
+      "top_features": []
+    },
+    {
+      "rank": 173,
+      "session_id": "add124845198",
+      "entity_id": "svc_c0fa647c",
+      "entity_type": "service_account",
+      "risk_score": 0.9908187513501836,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.98747035042135,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 8000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 2103.04
+        }
+      ]
+    },
+    {
+      "rank": 174,
+      "session_id": "025720b7070b",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9907647440051848,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9907989978081376,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 18000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1524.54
+        }
+      ]
+    },
+    {
+      "rank": 175,
+      "session_id": "92229cd2a995",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9907107366601858,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9064631774515828,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + session duration far from this entity's norm.",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 19000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "session_duration_sec",
+          "z_score": 2.54
+        }
+      ]
+    },
+    {
+      "rank": 176,
+      "session_id": "f6bef4b0fab6",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.9906567293151868,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.990830361365619,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 12000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 57.0
+        }
+      ]
+    },
+    {
+      "rank": 177,
+      "session_id": "3ac61094d9aa",
+      "entity_id": "user_54489d7e",
+      "entity_type": "user",
+      "risk_score": 0.990602721970188,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9859260756747348,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 2000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 3944.4
+        }
+      ]
+    },
+    {
+      "rank": 178,
+      "session_id": "d662696862f3",
+      "entity_id": "user_1a61615c",
+      "entity_type": "user",
+      "risk_score": 0.990548714625189,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9830976838886922,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 2000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 3809.48
+        }
+      ]
+    },
+    {
+      "rank": 179,
+      "session_id": "d006a2897f0e",
+      "entity_id": "user_8726aaaf",
+      "entity_type": "user",
+      "risk_score": 0.99049470728019,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "impossible_travel",
+      "classifier_confidence": 0.3971820920933804,
+      "ground_truth": "normal",
+      "reason_string": "No strong deviation from baseline; low-confidence flag.",
+      "top_features": []
+    },
+    {
+      "rank": 180,
+      "session_id": "6d3851171e58",
+      "entity_id": "user_b3163d00",
+      "entity_type": "user",
+      "risk_score": 0.9904406999351912,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9879830598378722,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 11000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 1542.83
+        }
+      ]
+    },
+    {
+      "rank": 181,
+      "session_id": "fe0bfb0b61c4",
+      "entity_id": "user_ff26c9ec",
+      "entity_type": "user",
+      "risk_score": 0.9903866925901924,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9789458160826634,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 2000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 3560.83
+        }
+      ]
+    },
+    {
+      "rank": 182,
+      "session_id": "ce5624f40a17",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9903326852451934,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9911220922336212,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 20000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 863.61
+        }
+      ]
+    },
+    {
+      "rank": 183,
+      "session_id": "8fd0fff6751a",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9902786779001944,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.9751026772363264,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 4000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 862.41
+        }
+      ]
+    },
+    {
+      "rank": 184,
+      "session_id": "eaabe19a711c",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9902246705551956,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.8808001551029047,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 2000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 3287.65
+        }
+      ]
+    },
+    {
+      "rank": 185,
+      "session_id": "04f00540c97b",
+      "entity_id": "user_3880f310",
+      "entity_type": "user",
+      "risk_score": 0.9901706632101964,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.84567548968151,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + login at an unusual hour for this entity.",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 3000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "hour_z",
+          "z_score": 4.38
+        }
+      ]
+    },
+    {
+      "rank": 186,
+      "session_id": "563bb8846deb",
+      "entity_id": "dev_09c9cb1b",
+      "entity_type": "edge_device",
+      "risk_score": 0.9901166558651976,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "brute_force",
+      "classifier_confidence": 0.977087527660743,
+      "ground_truth": "anomaly",
+      "reason_string": "Flagged due to: many failed logins from this source IP in a short window + failed authentication attempt(s) + implausible geographic velocity (impossible travel).",
+      "top_features": [
+        {
+          "feature": "ip_failed_5min",
+          "z_score": 11000000.0
+        },
+        {
+          "feature": "failed_auth_attempts",
+          "z_score": 1000000.0
+        },
+        {
+          "feature": "geo_km_per_hr",
+          "z_score": 291.51
+        }
+      ]
+    },
+    {
+      "rank": 187,
+      "session_id": "21e951373dd9",
+      "entity_id": "user_ff26c9ec",
+      "entity_type": "user",
+      "risk_score": 0.9900626485201988,
+      "detection_method": "sequence_lstm",
+      "predicted_attack": "impossible_travel",
+      "classifier_confidence": 0.3468458758141283,
+      "ground_truth": "normal",
+      "reason_string": "Flagged due to: unusually high number of resources touched in one session.",
+      "top_features": [
+        {
+          "feature": "n_resources_this_session",
+          "z_score": 1.39
+        }
+      ]
+    }
+  ],
+  "entity_history": {
+    "user_21f0d642": [
+      {
+        "session_id": "b4ea1b7d1f67",
+        "ts": "2026-07-01 10:47:58.344320",
+        "geo_location": "NewYork_US",
+        "resource_accessed": "resource_108,resource_112",
+        "auth_method": "token",
+        "session_duration_sec": 196
+      },
+      {
+        "session_id": "fe3eb8cc08ff",
+        "ts": "2026-07-01 09:48:18.656199",
+        "geo_location": "NewYork_US",
+        "resource_accessed": "resource_117,resource_108,resource_081",
+        "auth_method": "token",
+        "session_duration_sec": 163
+      },
+      {
+        "session_id": "28f6c9d2dc84",
+        "ts": "2026-07-01 09:48:12.491955",
+        "geo_location": "NewYork_US",
+        "resource_accessed": "resource_081,resource_065",
+        "auth_method": "token",
+        "session_duration_sec": 260
+      },
+      {
+        "session_id": "e3b83ad040d1",
+        "ts": "2026-07-01 00:06:21.316875",
+        "geo_location": "Mumbai_IN",
+        "resource_accessed": "resource_108,resource_112",
+        "auth_method": "token",
+        "session_duration_sec": 296
+      },
+      {
+        "session_id": "994a390ec19f",
+        "ts": "2026-07-01 00:02:26.455608",
+        "geo_location": "NewYork_US",
+        "resource_accessed": "resource_108,resource_112",
+        "auth_method": "token",
+        "session_duration_sec": 296
+      },
+      {
+        "session_id": "5e0dea0541d5",
+        "ts": "2026-06-30 16:43:22.812280",
+        "geo_location": "NewYork_US",
+        "resource_accessed": "login_endpoint",
+        "auth_method": "token",
+        "session_duration_sec": 2
+      },
+      {
+        "session_id": "1b095d66f713",
+        "ts": "2026-06-29 04:17:16.357601",
+        "geo_location": "NewYork_US",
+        "resource_accessed": "resource_089",
+        "auth_method": "token",
+        "session_duration_sec": 136
+      },
+      {
+        "session_id": "59a8b06bbc95",
+        "ts": "2026-06-29 00:53:21.356781",
+        "geo_location": "NewYork_US",
+        "resource_accessed": "resource_010",
+        "auth_method": "token",
+        "session_duration_sec": 142
+      }
+    ],
+    "user_3880f310": [
+      {
+        "session_id": "e6f45a7b4ce9",
+        "ts": "2026-07-01 09:32:33.089717",
+        "geo_location": "Frankfurt_DE",
+        "resource_accessed": "resource_051,resource_034",
+        "auth_method": "token",
+        "session_duration_sec": 380
+      },
+      {
+        "session_id": "1037f70cb634",
+        "ts": "2026-06-30 16:44:01.187053",
+        "geo_location": "Moscow_RU",
+        "resource_accessed": "login_endpoint",
+        "auth_method": "token",
+        "session_duration_sec": 2
+      },
+      {
+        "session_id": "e624b98883bb",
+        "ts": "2026-06-30 09:42:41.050872",
+        "geo_location": "Frankfurt_DE",
+        "resource_accessed": "resource_028,resource_113,resource_114",
+        "auth_method": "token",
+        "session_duration_sec": 452
+      },
+      {
+        "session_id": "705da2527f6c",
+        "ts": "2026-06-30 09:34:20.563279",
+        "geo_location": "Frankfurt_DE",
+        "resource_accessed": "resource_059,resource_064,resource_083,resource_041",
+        "auth_method": "token",
+        "session_duration_sec": 163
+      },
+      {
+        "session_id": "f54072df41bc",
+        "ts": "2026-06-30 08:51:39.941363",
+        "geo_location": "Frankfurt_DE",
+        "resource_accessed": "resource_034,resource_118,resource_059",
+        "auth_method": "token",
+        "session_duration_sec": 35
+      },
+      {
+        "session_id": "61b63560247f",
+        "ts": "2026-06-29 09:54:14.823837",
+        "geo_location": "Frankfurt_DE",
+        "resource_accessed": "resource_092,resource_084,resource_059,resource_118",
+        "auth_method": "token",
+        "session_duration_sec": 245
+      },
+      {
+        "session_id": "aaeb4a917b7c",
+        "ts": "2026-06-29 09:52:58.675410",
+        "geo_location": "Frankfurt_DE",
+        "resource_accessed": "resource_114,resource_059",
+        "auth_method": "token",
+        "session_duration_sec": 240
+      },
+      {
+        "session_id": "6d6e4cce07ff",
+        "ts": "2026-06-29 09:41:01.918532",
+        "geo_location": "Frankfurt_DE",
+        "resource_accessed": "resource_084,resource_059",
+        "auth_method": "token",
+        "session_duration_sec": 30
+      }
+    ],
+    "user_471233c5": [
+      {
+        "session_id": "683f64d2bb34",
+        "ts": "2026-07-01 10:22:36.003224",
+        "geo_location": "Singapore_SG",
+        "resource_accessed": "resource_071,resource_114,resource_097",
+        "auth_method": "certificate",
+        "session_duration_sec": 385
+      },
+      {
+        "session_id": "b8c78fdaf4fd",
+        "ts": "2026-07-01 10:01:54.393097",
+        "geo_location": "Singapore_SG",
+        "resource_accessed": "resource_093,resource_069,resource_088,resource_015",
+        "auth_method": "certificate",
+        "session_duration_sec": 157
+      },
+      {
+        "session_id": "83be8d2b47e2",
+        "ts": "2026-07-01 09:37:16.359982",
+        "geo_location": "Singapore_SG",
+        "resource_accessed": "resource_097,resource_069,resource_015",
+        "auth_method": "certificate",
+        "session_duration_sec": 279
+      },
+      {
+        "session_id": "9edbe54a12e2",
+        "ts": "2026-06-30 16:43:39.611612",
+        "geo_location": "Bangalore_IN",
+        "resource_accessed": "login_endpoint",
+        "auth_method": "certificate",
+        "session_duration_sec": 3
+      },
+      {
+        "session_id": "2d51061fc956",
+        "ts": "2026-06-30 10:26:36.179139",
+        "geo_location": "Singapore_SG",
+        "resource_accessed": "resource_114,resource_069,resource_097,resource_071",
+        "auth_method": "certificate",
+        "session_duration_sec": 206
+      },
+      {
+        "session_id": "16cbce0a4055",
+        "ts": "2026-06-30 09:46:37.476887",
+        "geo_location": "Singapore_SG",
+        "resource_accessed": "resource_111,resource_097,resource_093",
+        "auth_method": "certificate",
+        "session_duration_sec": 221
+      },
+      {
+        "session_id": "1139eb11b549",
+        "ts": "2026-06-30 07:51:56.303881",
+        "geo_location": "Singapore_SG",
+        "resource_accessed": "resource_088,resource_069,resource_002,resource_114",
+        "auth_method": "certificate",
+        "session_duration_sec": 226
+      },
+      {
+        "session_id": "64442e25a56a",
+        "ts": "2026-06-30 03:58:05.316244",
+        "geo_location": "Singapore_SG",
+        "resource_accessed": "resource_053",
+        "auth_method": "certificate",
+        "session_duration_sec": 169
+      }
+    ],
+    "user_9f48adab": [
+      {
+        "session_id": "cd31172cf606",
+        "ts": "2026-07-01 10:29:03.282001",
+        "geo_location": "NewYork_US",
+        "resource_accessed": "resource_066",
+        "auth_method": "biometric",
+        "session_duration_sec": 149
+      },
+      {
+        "session_id": "6fe26be4e59f",
+        "ts": "2026-07-01 09:54:53.924404",
+        "geo_location": "NewYork_US",
+        "resource_accessed": "resource_007,resource_018",
+        "auth_method": "biometric",
+        "session_duration_sec": 622
+      },
+      {
+        "session_id": "2da3adfe835b",
+        "ts": "2026-07-01 09:47:04.773938",
+        "geo_location": "NewYork_US",
+        "resource_accessed": "resource_015,resource_018,resource_052,resource_066",
+        "auth_method": "biometric",
+        "session_duration_sec": 341
+      },
+      {
+        "session_id": "162f2a9f664b",
+        "ts": "2026-06-30 11:49:18.776828",
+        "geo_location": "NewYork_US",
+        "resource_accessed": "resource_015,resource_064",
+        "auth_method": "biometric",
+        "session_duration_sec": 291
+      },
+      {
+        "session_id": "8c6485b51ca4",
+        "ts": "2026-06-30 11:22:38.309319",
+        "geo_location": "NewYork_US",
+        "resource_accessed": "resource_066,resource_097",
+        "auth_method": "biometric",
+        "session_duration_sec": 316
+      },
+      {
+        "session_id": "981c3928afe3",
+        "ts": "2026-06-30 09:50:49.088044",
+        "geo_location": "NewYork_US",
+        "resource_accessed": "resource_097,resource_064",
+        "auth_method": "biometric",
+        "session_duration_sec": 424
+      },
+      {
+        "session_id": "40092a0d5803",
+        "ts": "2026-06-30 09:08:29.188994",
+        "geo_location": "NewYork_US",
+        "resource_accessed": "resource_052,resource_012",
+        "auth_method": "biometric",
+        "session_duration_sec": 240
+      },
+      {
+        "session_id": "1bbda0da4ff7",
+        "ts": "2026-06-30 07:09:15.212726",
+        "geo_location": "NewYork_US",
+        "resource_accessed": "resource_111,resource_064,resource_007,resource_097",
+        "auth_method": "biometric",
+        "session_duration_sec": 123
+      }
+    ],
+    "user_54489d7e": [
+      {
+        "session_id": "cba3da67337a",
+        "ts": "2026-07-01 10:58:33.565014",
+        "geo_location": "Mumbai_IN",
+        "resource_accessed": "resource_025,resource_111,resource_114",
+        "auth_method": "token",
+        "session_duration_sec": 62
+      },
+      {
+        "session_id": "310eec7f3fe4",
+        "ts": "2026-07-01 10:58:08.818314",
+        "geo_location": "Mumbai_IN",
+        "resource_accessed": "resource_107",
+        "auth_method": "token",
+        "session_duration_sec": 363
+      },
+      {
+        "session_id": "c7300dc87c4d",
+        "ts": "2026-07-01 10:51:26.682091",
+        "geo_location": "Mumbai_IN",
+        "resource_accessed": "resource_085,resource_074,resource_009",
+        "auth_method": "token",
+        "session_duration_sec": 358
+      },
+      {
+        "session_id": "61f57c88b720",
+        "ts": "2026-06-30 16:43:15.065171",
+        "geo_location": "SaoPaulo_BR",
+        "resource_accessed": "login_endpoint",
+        "auth_method": "token",
+        "session_duration_sec": 4
+      },
+      {
+        "session_id": "ad744e2121f8",
+        "ts": "2026-06-30 12:08:26.492695",
+        "geo_location": "Mumbai_IN",
+        "resource_accessed": "resource_085",
+        "auth_method": "token",
+        "session_duration_sec": 366
+      },
+      {
+        "session_id": "7d38d0de1bb1",
+        "ts": "2026-06-30 11:52:24.037956",
+        "geo_location": "Mumbai_IN",
+        "resource_accessed": "resource_091,resource_085",
+        "auth_method": "token",
+        "session_duration_sec": 356
+      },
+      {
+        "session_id": "5297ff65ce61",
+        "ts": "2026-06-30 11:23:26.482680",
+        "geo_location": "Mumbai_IN",
+        "resource_accessed": "resource_085,resource_038,resource_009,resource_081",
+        "auth_method": "token",
+        "session_duration_sec": 192
+      },
+      {
+        "session_id": "273a4bacdcd0",
+        "ts": "2026-06-30 11:09:15.338275",
+        "geo_location": "Mumbai_IN",
+        "resource_accessed": "resource_006",
+        "auth_method": "token",
+        "session_duration_sec": 338
+      }
+    ],
+    "user_b3163d00": [
+      {
+        "session_id": "a27bcf1fa31a",
+        "ts": "2026-07-01 11:04:39.516930",
+        "geo_location": "Delhi_IN",
+        "resource_accessed": "resource_077,resource_015",
+        "auth_method": "token",
+        "session_duration_sec": 232
+      },
+      {
+        "session_id": "ecf6913b7770",
+        "ts": "2026-07-01 10:02:05.156994",
+        "geo_location": "Delhi_IN",
+        "resource_accessed": "resource_113,resource_003,resource_040",
+        "auth_method": "token",
+        "session_duration_sec": 445
+      },
+      {
+        "session_id": "37939160f9e8",
+        "ts": "2026-06-30 16:43:12.383433",
+        "geo_location": "Delhi_IN",
+        "resource_accessed": "login_endpoint",
+        "auth_method": "token",
+        "session_duration_sec": 4
+      },
+      {
+        "session_id": "8d9cddcf56c5",
+        "ts": "2026-06-30 12:54:34.338681",
+        "geo_location": "Singapore_SG",
+        "resource_accessed": "login_endpoint",
+        "auth_method": "token",
+        "session_duration_sec": 3
+      },
+      {
+        "session_id": "7d7e08389a72",
+        "ts": "2026-06-30 12:54:33.292952",
+        "geo_location": "Mumbai_IN",
+        "resource_accessed": "login_endpoint",
+        "auth_method": "token",
+        "session_duration_sec": 2
+      },
+      {
+        "session_id": "627d40a78ce3",
+        "ts": "2026-06-30 12:54:32.970999",
+        "geo_location": "NewYork_US",
+        "resource_accessed": "login_endpoint",
+        "auth_method": "token",
+        "session_duration_sec": 3
+      },
+      {
+        "session_id": "30d3af05102a",
+        "ts": "2026-06-30 12:54:30.235586",
+        "geo_location": "Mumbai_IN",
+        "resource_accessed": "login_endpoint",
+        "auth_method": "token",
+        "session_duration_sec": 4
+      },
+      {
+        "session_id": "6d3851171e58",
+        "ts": "2026-06-30 12:54:27.409783",
+        "geo_location": "SaoPaulo_BR",
+        "resource_accessed": "login_endpoint",
+        "auth_method": "token",
+        "session_duration_sec": 4
+      }
+    ],
+    "user_ff26c9ec": [
+      {
+        "session_id": "d5ebf638a7b8",
+        "ts": "2026-07-01 11:27:27.892832",
+        "geo_location": "London_UK",
+        "resource_accessed": "resource_086,resource_120,resource_021",
+        "auth_method": "password",
+        "session_duration_sec": 360
+      },
+      {
+        "session_id": "12ef9eb52599",
+        "ts": "2026-07-01 10:45:58.704310",
+        "geo_location": "London_UK",
+        "resource_accessed": "resource_021,resource_035,resource_027",
+        "auth_method": "password",
+        "session_duration_sec": 420
+      },
+      {
+        "session_id": "351bfbbb34a4",
+        "ts": "2026-07-01 10:39:39.980686",
+        "geo_location": "London_UK",
+        "resource_accessed": "resource_107,resource_048",
+        "auth_method": "password",
+        "session_duration_sec": 439
+      },
+      {
+        "session_id": "bcac494b512a",
+        "ts": "2026-07-01 10:30:27.081014",
+        "geo_location": "London_UK",
+        "resource_accessed": "resource_107,resource_027,resource_048,resource_047",
+        "auth_method": "password",
+        "session_duration_sec": 279
+      },
+      {
+        "session_id": "e71c04e032be",
+        "ts": "2026-07-01 09:46:59.747473",
+        "geo_location": "London_UK",
+        "resource_accessed": "resource_048,resource_090,resource_120,resource_027",
+        "auth_method": "password",
+        "session_duration_sec": 328
+      },
+      {
+        "session_id": "fb5415ee6f5c",
+        "ts": "2026-07-01 08:13:12.955321",
+        "geo_location": "London_UK",
+        "resource_accessed": "resource_107,resource_086,resource_090,resource_048",
+        "auth_method": "password",
+        "session_duration_sec": 381
+      },
+      {
+        "session_id": "4cade4ff841f",
+        "ts": "2026-06-30 11:31:25.251150",
+        "geo_location": "London_UK",
+        "resource_accessed": "resource_046,resource_090,resource_047,resource_021",
+        "auth_method": "password",
+        "session_duration_sec": 196
+      },
+      {
+        "session_id": "45cff2720fe3",
+        "ts": "2026-06-30 09:11:08.291293",
+        "geo_location": "London_UK",
+        "resource_accessed": "resource_046",
+        "auth_method": "password",
+        "session_duration_sec": 393
+      }
+    ],
+    "dev_09c9cb1b": [
+      {
+        "session_id": "dd4a866c34d7",
+        "ts": "2026-07-01 23:59:24",
+        "geo_location": "Delhi_IN",
+        "resource_accessed": "resource_021,resource_095",
+        "auth_method": "certificate",
+        "session_duration_sec": 325
+      },
+      {
+        "session_id": "f6869d5d7428",
+        "ts": "2026-07-01 23:59:24",
+        "geo_location": "Delhi_IN",
+        "resource_accessed": "resource_095",
+        "auth_method": "certificate",
+        "session_duration_sec": 331
+      },
+      {
+        "session_id": "f81f049b5b5c",
+        "ts": "2026-07-01 23:59:24",
+        "geo_location": "Delhi_IN",
+        "resource_accessed": "resource_095,resource_021",
+        "auth_method": "certificate",
+        "session_duration_sec": 213
+      },
+      {
+        "session_id": "dbe05fbb1a5a",
+        "ts": "2026-07-01 23:59:24",
+        "geo_location": "Delhi_IN",
+        "resource_accessed": "resource_021,resource_095",
+        "auth_method": "certificate",
+        "session_duration_sec": 263
+      },
+      {
+        "session_id": "f752313f3ca6",
+        "ts": "2026-07-01 23:59:24",
+        "geo_location": "Delhi_IN",
+        "resource_accessed": "resource_095",
+        "auth_method": "certificate",
+        "session_duration_sec": 335
+      },
+      {
+        "session_id": "6103d7f7a9a0",
+        "ts": "2026-07-01 23:59:24",
+        "geo_location": "Delhi_IN",
+        "resource_accessed": "resource_095",
+        "auth_method": "certificate",
+        "session_duration_sec": 391
+      },
+      {
+        "session_id": "6756521b761a",
+        "ts": "2026-07-01 23:32:00.925390",
+        "geo_location": "Delhi_IN",
+        "resource_accessed": "resource_021,resource_095",
+        "auth_method": "certificate",
+        "session_duration_sec": 343
+      },
+      {
+        "session_id": "ce6142764cc5",
+        "ts": "2026-07-01 23:26:43.596420",
+        "geo_location": "Delhi_IN",
+        "resource_accessed": "resource_021",
+        "auth_method": "certificate",
+        "session_duration_sec": 354
+      }
+    ],
+    "user_1a61615c": [
+      {
+        "session_id": "c1bc5da00f1d",
+        "ts": "2026-07-01 10:36:15.882987",
+        "geo_location": "Sydney_AU",
+        "resource_accessed": "resource_072,resource_119",
+        "auth_method": "password",
+        "session_duration_sec": 147
+      },
+      {
+        "session_id": "3f550a2ba64c",
+        "ts": "2026-07-01 10:35:51.673660",
+        "geo_location": "Sydney_AU",
+        "resource_accessed": "resource_100,resource_099",
+        "auth_method": "password",
+        "session_duration_sec": 275
+      },
+      {
+        "session_id": "63c6a592d718",
+        "ts": "2026-07-01 10:29:56.023833",
+        "geo_location": "Sydney_AU",
+        "resource_accessed": "resource_100,resource_108,resource_082,resource_042",
+        "auth_method": "password",
+        "session_duration_sec": 385
+      },
+      {
+        "session_id": "58565cfb2439",
+        "ts": "2026-07-01 10:20:29.015627",
+        "geo_location": "Sydney_AU",
+        "resource_accessed": "resource_108,resource_072,resource_119",
+        "auth_method": "password",
+        "session_duration_sec": 155
+      },
+      {
+        "session_id": "c4c11fc56e0b",
+        "ts": "2026-07-01 10:10:59.400319",
+        "geo_location": "Sydney_AU",
+        "resource_accessed": "resource_042,resource_099,resource_082,resource_072",
+        "auth_method": "password",
+        "session_duration_sec": 487
+      },
+      {
+        "session_id": "b85acd72e439",
+        "ts": "2026-07-01 10:05:07.194566",
+        "geo_location": "Sydney_AU",
+        "resource_accessed": "resource_099",
+        "auth_method": "password",
+        "session_duration_sec": 195
+      },
+      {
+        "session_id": "2273c23573c2",
+        "ts": "2026-07-01 09:43:33.132961",
+        "geo_location": "Sydney_AU",
+        "resource_accessed": "resource_119,resource_082",
+        "auth_method": "password",
+        "session_duration_sec": 169
+      },
+      {
+        "session_id": "67a4e1ba0c1f",
+        "ts": "2026-06-30 10:33:05.021378",
+        "geo_location": "Sydney_AU",
+        "resource_accessed": "resource_029",
+        "auth_method": "password",
+        "session_duration_sec": 230
+      }
+    ],
+    "svc_c0fa647c": [
+      {
+        "session_id": "5e0ca1eb409a",
+        "ts": "2026-07-01 23:59:24",
+        "geo_location": "Mumbai_IN",
+        "resource_accessed": "resource_077",
+        "auth_method": "certificate",
+        "session_duration_sec": 141
+      },
+      {
+        "session_id": "0f318853e85a",
+        "ts": "2026-07-01 23:59:24",
+        "geo_location": "Mumbai_IN",
+        "resource_accessed": "resource_077,resource_009",
+        "auth_method": "certificate",
+        "session_duration_sec": 442
+      },
+      {
+        "session_id": "2ce0a908ec74",
+        "ts": "2026-07-01 23:33:08.598296",
+        "geo_location": "Mumbai_IN",
+        "resource_accessed": "resource_077",
+        "auth_method": "certificate",
+        "session_duration_sec": 354
+      },
+      {
+        "session_id": "1def93e34e2c",
+        "ts": "2026-07-01 22:53:21.437052",
+        "geo_location": "Mumbai_IN",
+        "resource_accessed": "resource_009",
+        "auth_method": "certificate",
+        "session_duration_sec": 119
+      },
+      {
+        "session_id": "abff64100d81",
+        "ts": "2026-07-01 22:50:56.491037",
+        "geo_location": "Mumbai_IN",
+        "resource_accessed": "resource_009,resource_077",
+        "auth_method": "certificate",
+        "session_duration_sec": 177
+      },
+      {
+        "session_id": "fc19fdf48ba2",
+        "ts": "2026-07-01 22:49:34.319347",
+        "geo_location": "Mumbai_IN",
+        "resource_accessed": "resource_077,resource_009",
+        "auth_method": "certificate",
+        "session_duration_sec": 399
+      },
+      {
+        "session_id": "b0649e4f3a83",
+        "ts": "2026-07-01 22:42:18.700084",
+        "geo_location": "Mumbai_IN",
+        "resource_accessed": "resource_009",
+        "auth_method": "certificate",
+        "session_duration_sec": 302
+      },
+      {
+        "session_id": "b92d4a0a87f9",
+        "ts": "2026-07-01 22:02:50.136315",
+        "geo_location": "Mumbai_IN",
+        "resource_accessed": "resource_009,resource_077",
+        "auth_method": "certificate",
+        "session_duration_sec": 166
+      }
+    ],
+    "user_8726aaaf": [
+      {
+        "session_id": "05b2eb8e31ee",
+        "ts": "2026-07-01 12:32:36.085214",
+        "geo_location": "Sydney_AU",
+        "resource_accessed": "resource_062,resource_116",
+        "auth_method": "password",
+        "session_duration_sec": 246
+      },
+      {
+        "session_id": "cede035d217d",
+        "ts": "2026-07-01 10:52:27.864362",
+        "geo_location": "Sydney_AU",
+        "resource_accessed": "resource_052,resource_022,resource_111,resource_063",
+        "auth_method": "password",
+        "session_duration_sec": 298
+      },
+      {
+        "session_id": "d3e9920b783f",
+        "ts": "2026-07-01 09:28:19.822804",
+        "geo_location": "Sydney_AU",
+        "resource_accessed": "resource_052,resource_116,resource_111",
+        "auth_method": "password",
+        "session_duration_sec": 379
+      },
+      {
+        "session_id": "125e0e26ff4e",
+        "ts": "2026-07-01 08:10:36.249958",
+        "geo_location": "Sydney_AU",
+        "resource_accessed": "resource_022,resource_062",
+        "auth_method": "password",
+        "session_duration_sec": 301
+      },
+      {
+        "session_id": "0439ffa3904a",
+        "ts": "2026-06-30 16:44:13.846972",
+        "geo_location": "Moscow_RU",
+        "resource_accessed": "login_endpoint",
+        "auth_method": "password",
+        "session_duration_sec": 2
+      },
+      {
+        "session_id": "52534460b38f",
+        "ts": "2026-06-30 10:18:56.711655",
+        "geo_location": "Sydney_AU",
+        "resource_accessed": "resource_028,resource_052,resource_022,resource_116",
+        "auth_method": "password",
+        "session_duration_sec": 435
+      },
+      {
+        "session_id": "0b81b6483dc1",
+        "ts": "2026-06-30 09:13:17.304737",
+        "geo_location": "Sydney_AU",
+        "resource_accessed": "resource_052",
+        "auth_method": "password",
+        "session_duration_sec": 203
+      },
+      {
+        "session_id": "31d97e47ca9f",
+        "ts": "2026-06-29 13:06:43.327140",
+        "geo_location": "Sydney_AU",
+        "resource_accessed": "resource_022,resource_052",
+        "auth_method": "password",
+        "session_duration_sec": 153
+      }
+    ]
+  }
+}
