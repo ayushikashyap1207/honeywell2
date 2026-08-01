@@ -22,3 +22,5 @@ dashboard-app/.env.local
 anomaly-scoring-data/
 *-data/
 
+# Real pulled data (Phase 2, Okta) — contains real IPs/entity IDs, not secrets exactly, but not something to publish
+data/okta_raw_events.json
