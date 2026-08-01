@@ -71,6 +71,17 @@ Open the printed URL (usually `http://localhost:5173`). Header shows:
 - **Showing exported pipeline data** → backend not running, using last snapshot
 - **Empty state** → run `python export_alerts_json.py` first
 
+### 4. (Optional) Real-time streaming scoring
+With Kafka/Redis running (from step 3) and the API server up:
+```bash
+# Terminal A — stateful feature computation (EWMA baseline, sliding window, per-entity Redis state)
+python -m faust -A streaming.feature_app worker -l info --without-web
+
+# Terminal B — live scoring (Isolation Forest cold-start + LSTM sequence, percentile-rank fusion)
+python -m faust -A streaming.scoring_app worker -l info --without-web
+```
+Use `--without-web` — Faust's built-in web dashboard competes for a port with the FastAPI backend on this single-node setup. Scored sessions publish to Kafka (`scored_sessions`) and to Redis pub/sub (`live_scores`), which `/ws/alerts` forwards to the React dashboard in real time.
+
 ---
 
 ## Architecture
@@ -109,7 +120,7 @@ Their scores aren't on the same scale, so they're merged as **percentile ranks**
 | Backend API | FastAPI + SQLAlchemy |
 | Live frontend | React + Vite |
 | Static frontend | Plain HTML/CSS/JS |
-| Streaming (in progress) | Kafka, Redis, Faust, MLflow, Prefect |
+| Streaming | Kafka, Redis, Faust (live) — MLflow, Prefect (planned, Phase 4) |
 | Real data source | Okta System Log API |
 
 ## Why these design choices (short version)
@@ -162,7 +173,7 @@ Both detectors train **only on normal sessions** — never on labeled attacks �
 | `GET /api/summary` | Summary counts for the dashboard cards |
 | `GET /api/alerts` | Ranked, filterable alert list |
 | `GET /api/entity/{id}/history` | An entity's recent sessions |
-| `WS /ws/alerts` | Live connection status (not yet pushing live events — see roadmap) |
+| `WS /ws/alerts` | Pushes live scored sessions in real time via Redis pub/sub |
 
 ## Evaluation
 
@@ -196,18 +207,20 @@ What real data broke vs. synthetic assumptions:
 | A single failure-count field | Each failed attempt is its own separate event |
 | Clean 3-way entity type split | Real actor types don't map 1:1 — needs an "unknown" fallback |
 
-**Known issue to fix first:** single-node Kafka's consumer-group coordination isn't working cleanly yet (data is confirmed present via manual partition reads, but consumer groups time out). Needs fixing before Phase 3, since Faust uses consumer groups.
+**✅ Done — Layer 3, Phase 3: Streaming features + scoring** — the Kafka consumer-group coordination issue is resolved (single-node KRaft works cleanly once Faust's workers run with `--without-web`, avoiding a port conflict with the FastAPI backend). `streaming/feature_app.py` and `streaming/scoring_app.py` are live:
+- Per-entity state (EWMA hour stats, haversine geo velocity, 5-session sliding window, cross-entity IP signals) now lives in Redis with a 24h TTL, replacing the batch CSV recompute
+- Both detectors score live: Isolation Forest for cold-start entities, LSTM autoencoder once an entity's window fills, fused via percentile rank against a rolling Redis reference sample
+- Scored sessions publish to Kafka (`scored_sessions`) and Redis pub/sub (`live_scores`)
 
-**🔜 Next — Phase 3: Streaming features + scoring**
-- Fix the Kafka consumer-group issue
-- Faust + Redis: same EWMA/z-score math as `features.py`, now stateful and live
-- Score incoming sessions with the already-trained models (no retraining yet)
-- TimescaleDB becomes a live writer instead of a batch-loaded mirror
+**🔜 Remaining for Phase 3:** TimescaleDB live writer — streaming scores aren't yet landing in Postgres, so `/api/alerts` and `/api/summary` still only reflect the last batch load. Next step: have `scoring_app.py` write each scored session directly into the `scores` table alongside its existing Kafka/Redis outputs.
+
+**✅ Done — Layer 3, Phase 5: Final wiring** — `/ws/alerts` now subscribes to the `live_scores` Redis channel and pushes real scored sessions to the dashboard as they happen, instead of being a static "connected" stub. Done ahead of Phase 4 since it only depended on Phase 3's scoring output existing.
 
 **🔜 Phase 4: Self-improving system**
 - MLflow model registry (proper versioning)
 - Drift detection → automatic Prefect retraining
 - Slack alerts for top-ranked live alerts
+
 
 **🔜 Phase 5: Final wiring**
 - Make `/ws/alerts` push real events instead of just a static "connected" status
