@@ -17,3 +17,8 @@ dashboard-app/.env.local
 .DS_Store
 .vscode/
 *.swp
+
+# Faust streaming app local state
+anomaly-scoring-data/
+*-data/
+
