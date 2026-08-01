@@ -41,15 +41,25 @@ app.add_middleware(
 )
 
 from fastapi import WebSocket
+import asyncio
+import redis.asyncio as aioredis
 
 @app.websocket("/ws/alerts")
 async def ws_alerts(websocket: WebSocket):
     await websocket.accept()
+    redis_client = aioredis.Redis(host="localhost", port=6379, decode_responses=True)
+    pubsub = redis_client.pubsub()
+    await pubsub.subscribe("live_scores")
     try:
-        while True:
-            await websocket.receive_text()
+        async for message in pubsub.listen():
+            if message["type"] != "message":
+                continue
+            await websocket.send_text(message["data"])
     except Exception:
         pass
+    finally:
+        await pubsub.unsubscribe("live_scores")
+        await redis_client.close()
     
 @app.get("/api/summary")
 def summary():
