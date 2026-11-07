@@ -1,0 +1,100 @@
+{
+  "generated_at": "2026-11-07T23:32:47.705983+00:00",
+  "reference_rows": 13050,
+  "current_rows": 5594,
+  "reference_fraction": 0.7,
+  "overall_status": "warning",
+  "max_feature_psi": 0.1648,
+  "drifted_features": 0,
+  "warning_features": 1,
+  "features": [
+    {
+      "feature": "cmd_seq_len",
+      "psi": 0.1648,
+      "ks_statistic": 0.0447,
+      "ks_p_value": 0.0,
+      "status": "warning"
+    },
+    {
+      "feature": "session_duration_sec",
+      "psi": 0.0291,
+      "ks_statistic": 0.052,
+      "ks_p_value": 0.0,
+      "status": "stable"
+    },
+    {
+      "feature": "n_resources_this_session",
+      "psi": 0.0057,
+      "ks_statistic": 0.0356,
+      "ks_p_value": 9.8e-05,
+      "status": "stable"
+    },
+    {
+      "feature": "hour_z",
+      "psi": 0.0055,
+      "ks_statistic": 0.0354,
+      "ks_p_value": 0.000108,
+      "status": "stable"
+    },
+    {
+      "feature": "resource_novelty",
+      "psi": 0.0,
+      "ks_statistic": 0.0161,
+      "ks_p_value": 0.256766,
+      "status": "stable"
+    },
+    {
+      "feature": "device_novel",
+      "psi": 0.0,
+      "ks_statistic": 0.007,
+      "ks_p_value": 0.990139,
+      "status": "stable"
+    },
+    {
+      "feature": "geo_km_per_hr",
+      "psi": 0.0,
+      "ks_statistic": 0.0578,
+      "ks_p_value": 0.0,
+      "status": "stable"
+    },
+    {
+      "feature": "failed_auth_attempts",
+      "psi": 0.0,
+      "ks_statistic": 0.0447,
+      "ks_p_value": 0.0,
+      "status": "stable"
+    },
+    {
+      "feature": "is_cold_start",
+      "psi": 0.0,
+      "ks_statistic": 0.0087,
+      "ks_p_value": 0.926654,
+      "status": "stable"
+    },
+    {
+      "feature": "ip_failed_5min",
+      "psi": 0.0,
+      "ks_statistic": 0.0447,
+      "ks_p_value": 0.0,
+      "status": "stable"
+    },
+    {
+      "feature": "ip_unique_entities_5min",
+      "psi": 0.0,
+      "ks_statistic": 0.0136,
+      "ks_p_value": 0.461025,
+      "status": "stable"
+    }
+  ],
+  "score": {
+    "feature": "risk_score",
+    "psi": 0.0761,
+    "ks_statistic": 0.1198,
+    "ks_p_value": 0.0,
+    "status": "stable"
+  },
+  "thresholds": {
+    "warning": 0.1,
+    "significant": 0.25
+  }
+}

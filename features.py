@@ -4,7 +4,8 @@
 
 import numpy as np
 import pandas as pd
-from math import radians, sin, cos, sqrt, atan2
+
+from serving.geo import GEO_LOCATIONS, haversine_km
 
 DRIFT_HALF_LIFE_SESSIONS = 30
 _EWMA_ALPHA = 1 - 0.5 ** (1 / DRIFT_HALF_LIFE_SESSIONS)
@@ -18,26 +19,6 @@ def ewma_update(prev_mean, prev_var, x, alpha=_EWMA_ALPHA):
     new_mean = prev_mean + alpha * diff
     new_var = (1 - alpha) * (prev_var + alpha * diff * diff)
     return new_mean, new_var
-
-GEO_LOCATIONS = {
-    "Bangalore_IN": (12.97, 77.59), "Mumbai_IN": (19.07, 72.87),
-    "Delhi_IN": (28.61, 77.20), "London_UK": (51.50, -0.12),
-    "NewYork_US": (40.71, -74.00), "Frankfurt_DE": (50.11, 8.68),
-    "Singapore_SG": (1.35, 103.82), "SaoPaulo_BR": (-23.55, -46.63),
-    "Sydney_AU": (-33.87, 151.21), "Moscow_RU": (55.75, 37.61),
-}
-
-
-def haversine_km(g1, g2):
-    if g1 not in GEO_LOCATIONS or g2 not in GEO_LOCATIONS:
-        return 0.0
-    lat1, lon1 = GEO_LOCATIONS[g1]
-    lat2, lon2 = GEO_LOCATIONS[g2]
-    R = 6371
-    dlat, dlon = radians(lat2 - lat1), radians(lon2 - lon1)
-    a = sin(dlat/2)**2 + cos(radians(lat1))*cos(radians(lat2))*sin(dlon/2)**2
-    return R * 2 * atan2(sqrt(a), sqrt(1-a))
-
 
 def build_features(df: pd.DataFrame):
     df = df.copy()

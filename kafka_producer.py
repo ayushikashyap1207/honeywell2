@@ -7,7 +7,9 @@ events land on the same partition (needed for ordered, stateful
 per-entity processing in Phase 3's streaming features).
 
 Usage:
-    python kafka_producer.py --in data/okta_raw_events.json --topic access-logs
+    python kafka_producer.py --in data/okta_raw_events.json --topic raw_sessions
+
+The streaming feature worker listens on ``raw_sessions``.
 """
 
 import os
@@ -97,7 +99,7 @@ def main():
     parser.add_argument(
         "--in", dest="input_path", type=str, default="data/okta_raw_events.json"
     )
-    parser.add_argument("--topic", type=str, default="access-logs")
+    parser.add_argument("--topic", type=str, default="raw_sessions")
     parser.add_argument("--partitions", type=int, default=6)
     args = parser.parse_args()
 

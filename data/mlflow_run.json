@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-11-07T23:32:49.385532+00:00",
+  "tracking_uri": "sqlite:///mlflow.db",
+  "metrics": {
+    "pipeline_pr_auc": 0.7277,
+    "pipeline_roc_auc": 0.9827,
+    "pipeline_precision_at_1": 0.8727,
+    "pipeline_recall_at_1": 0.3967,
+    "pipeline_fpr_at_1": 0.00128,
+    "calibrated_pr_auc": 0.704,
+    "calibrated_roc_auc": 0.9886,
+    "calibrated_precision_at_1": 0.8727,
+    "calibrated_recall_at_1": 0.3967,
+    "calibrated_fpr_at_1": 0.00128,
+    "calibration_ece": 0.001,
+    "calibration_brier": 0.0096,
+    "sequence_lstm_brier": 0.0099,
+    "sequence_lstm_ece": 0.0029,
+    "sequence_lstm_conformal_recall": 1.0,
+    "cold_start_isolation_forest_brier": 0.0633,
+    "cold_start_isolation_forest_ece": 0.006,
+    "cold_start_isolation_forest_conformal_recall": 0.3333,
+    "drift_max_psi": 0.1648,
+    "drift_significant_features": 0
+  },
+  "status": "logged",
+  "run_id": "7f17a63d179d4c4ab2465e67a2e10aba",
+  "registry": {
+    "classifier": "registered as anomaly-attack-classifier"
+  }
+}

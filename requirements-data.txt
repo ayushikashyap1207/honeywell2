@@ -1,0 +1,5 @@
+# Small image used only to seed the demo database from CSV output
+pandas==2.2.2
+sqlalchemy==2.0.31
+psycopg2-binary==2.9.12
+python-dotenv==1.0.1

@@ -1,0 +1,10 @@
+# Streaming workers (feature computation + scoring)
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.5.1
+torch==2.2.0
+faust-streaming==0.13.0
+redis>=5,<9
+asyncpg==0.31.0
+confluent-kafka==2.15.0
+python-dotenv==1.0.1

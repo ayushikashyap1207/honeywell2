@@ -3,6 +3,8 @@ Phase 4: Anomaly Classification
 ----------------------------------
 """
 
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
@@ -19,7 +21,30 @@ FEATURE_COLS = [
 def load_data():
     feat = pd.read_csv("data/features.csv")
     labels = pd.read_csv("data/ground_truth_labels.csv")
-    return feat.merge(labels, on="session_id", how="left")
+    merged = feat.merge(labels, on="session_id", how="left")
+
+    feedback_path = Path("data/analyst_feedback.csv")
+    if feedback_path.exists():
+        feedback = pd.read_csv(feedback_path)
+        if not feedback.empty:
+            feedback = feedback.drop_duplicates(subset="session_id", keep="last")
+            feedback_features = feat[
+                feat["session_id"].isin(feedback["session_id"])
+            ].merge(
+                feedback[["session_id", "label", "anomaly_type"]],
+                on="session_id",
+                how="left",
+            )
+            merged = merged[
+                ~merged["session_id"].isin(feedback["session_id"])
+            ]
+            merged = pd.concat([merged, feedback_features], ignore_index=True)
+            print(
+                f"Added {len(feedback_features)} analyst-labelled sessions "
+                f"({int((feedback['label'] == 'anomaly').sum())} confirmed attacks)"
+            )
+
+    return merged
 
 
 def train_classifier(df: pd.DataFrame):

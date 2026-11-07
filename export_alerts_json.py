@@ -32,6 +32,15 @@ import ast
 # "{'device_novel': 1000000.0, 'resource_novelty': 5.71, 'is_cold_start': 4.84}"
 # — not JSON — so parse it with ast.literal_eval and turn it into the
 # [{feature, z_score}, ...] shape the dashboard expects.
+def optional_float(value):
+    if value is None or pd.isna(value):
+        return None
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
 def parse_top_features(val):
     if pd.isna(val):
         return []
@@ -57,6 +66,8 @@ for _, row in queue.iterrows():
         "entity_id": row.get("entity_id"),
         "entity_type": row.get("entity_type"),
         "risk_score": float(row.get("risk_score", 0)),
+        "calibrated_risk": optional_float(row.get("calibrated_risk")),
+        "conformal_p_value": optional_float(row.get("conformal_p_value")),
         "detection_method": row.get("detection_method"),
         "predicted_attack": row.get("predicted_type"),
         "classifier_confidence": row.get("predicted_confidence"),

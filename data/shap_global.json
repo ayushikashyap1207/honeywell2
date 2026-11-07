@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-11-07T23:32:49.263600+00:00",
+  "method": "RandomForest impurity importance (SHAP not installed)",
+  "sample_rows": 402,
+  "features": [
+    {
+      "feature": "cmd_seq_len",
+      "importance": 0.175202
+    },
+    {
+      "feature": "geo_km_per_hr",
+      "importance": 0.169459
+    },
+    {
+      "feature": "session_duration_sec",
+      "importance": 0.137023
+    },
+    {
+      "feature": "resource_novelty",
+      "importance": 0.106322
+    },
+    {
+      "feature": "device_novel",
+      "importance": 0.104548
+    },
+    {
+      "feature": "ip_unique_entities_5min",
+      "importance": 0.102029
+    },
+    {
+      "feature": "failed_auth_attempts",
+      "importance": 0.071336
+    },
+    {
+      "feature": "ip_failed_5min",
+      "importance": 0.069388
+    },
+    {
+      "feature": "hour_z",
+      "importance": 0.048882
+    },
+    {
+      "feature": "n_resources_this_session",
+      "importance": 0.012811
+    },
+    {
+      "feature": "is_cold_start",
+      "importance": 0.002999
+    }
+  ]
+}

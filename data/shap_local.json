@@ -1,0 +1,125 @@
+{
+  "generated_at": "2026-11-07T23:32:49.293190+00:00",
+  "rows": [
+    {
+      "session_id": "7314d0931af5",
+      "entity_id": "user_21f0d642",
+      "predicted_type": "low_and_slow_exfiltration",
+      "risk_score": 1.0,
+      "contributions": {
+        "resource_novelty": 5.71,
+        "device_novel": 3.0,
+        "is_cold_start": 3.0
+      },
+      "method": "z-score deviation (batch explainability)"
+    },
+    {
+      "session_id": "f6bacdf3564c",
+      "entity_id": "user_3880f310",
+      "predicted_type": "brute_force",
+      "risk_score": 1.0,
+      "contributions": {
+        "geo_km_per_hr": 99.0,
+        "ip_failed_5min": 13.0,
+        "session_duration_sec": 2.56
+      },
+      "method": "z-score deviation (batch explainability)"
+    },
+    {
+      "session_id": "7ef7daf3494f",
+      "entity_id": "user_3880f310",
+      "predicted_type": "brute_force",
+      "risk_score": 0.9999459926550012,
+      "contributions": {
+        "geo_km_per_hr": 99.0,
+        "ip_failed_5min": 12.0,
+        "session_duration_sec": 2.56
+      },
+      "method": "z-score deviation (batch explainability)"
+    },
+    {
+      "session_id": "313d34469ce8",
+      "entity_id": "user_471233c5",
+      "predicted_type": "brute_force",
+      "risk_score": 0.999891985310002,
+      "contributions": {
+        "geo_km_per_hr": 99.0,
+        "ip_failed_5min": 12.0,
+        "session_duration_sec": 2.54
+      },
+      "method": "z-score deviation (batch explainability)"
+    },
+    {
+      "session_id": "5c50d05fdc8a",
+      "entity_id": "user_3880f310",
+      "predicted_type": "brute_force",
+      "risk_score": 0.9998379779650032,
+      "contributions": {
+        "geo_km_per_hr": 99.0,
+        "ip_failed_5min": 7.0,
+        "session_duration_sec": 2.54
+      },
+      "method": "z-score deviation (batch explainability)"
+    },
+    {
+      "session_id": "6056b22b4eb7",
+      "entity_id": "user_3880f310",
+      "predicted_type": "brute_force",
+      "risk_score": 0.9997839706200043,
+      "contributions": {
+        "geo_km_per_hr": 99.0,
+        "ip_failed_5min": 9.0,
+        "session_duration_sec": 2.55
+      },
+      "method": "z-score deviation (batch explainability)"
+    },
+    {
+      "session_id": "e71b4ab343f3",
+      "entity_id": "user_3880f310",
+      "predicted_type": "brute_force",
+      "risk_score": 0.9997299632750054,
+      "contributions": {
+        "ip_failed_5min": 10.0,
+        "session_duration_sec": 2.54,
+        "cmd_seq_len": 2.1
+      },
+      "method": "z-score deviation (batch explainability)"
+    },
+    {
+      "session_id": "c6108cebead8",
+      "entity_id": "user_3880f310",
+      "predicted_type": "brute_force",
+      "risk_score": 0.9996759559300064,
+      "contributions": {
+        "geo_km_per_hr": 99.0,
+        "ip_failed_5min": 6.0,
+        "session_duration_sec": 2.55
+      },
+      "method": "z-score deviation (batch explainability)"
+    },
+    {
+      "session_id": "802bccaa4140",
+      "entity_id": "user_3880f310",
+      "predicted_type": "brute_force",
+      "risk_score": 0.9996219485850076,
+      "contributions": {
+        "geo_km_per_hr": 99.0,
+        "ip_failed_5min": 13.0,
+        "session_duration_sec": 2.56
+      },
+      "method": "z-score deviation (batch explainability)"
+    },
+    {
+      "session_id": "8bdfc6c45c08",
+      "entity_id": "user_3880f310",
+      "predicted_type": "brute_force",
+      "risk_score": 0.9995679412400088,
+      "contributions": {
+        "geo_km_per_hr": 99.0,
+        "ip_failed_5min": 14.0,
+        "session_duration_sec": 2.56
+      },
+      "method": "z-score deviation (batch explainability)"
+    }
+  ]
+}

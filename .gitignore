@@ -24,3 +24,8 @@ anomaly-scoring-data/
 
 # Real pulled data (Phase 2, Okta) — contains real IPs/entity IDs, not secrets exactly, but not something to publish
 data/okta_raw_events.json
+
+# Generated local artifacts
+mlflow.db
+mlruns/
+data/analyst_feedback.csv

@@ -1,0 +1,33 @@
+# GitHub only executes workflows stored under .github/workflows/.
+# This copy lives here because the local OAuth token did not have the
+# `workflow` scope during the initial push. After granting that scope, move
+# this file back to .github/workflows/ci.yml and push.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install test dependencies
+        run: |
+          pip install -r requirements-dev.txt -r requirements-api.txt
+          pip install numpy pandas scipy scikit-learn
+      - name: Run unit tests
+        run: python -m pytest -q
+
+  build-images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build API image
+        run: docker build -f docker/api.Dockerfile -t anomaly-api:ci .
+      - name: Build dashboard image
+        run: docker build -f docker/dashboard.Dockerfile -t anomaly-dashboard:ci .
